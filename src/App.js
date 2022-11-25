@@ -14,7 +14,7 @@ import {
 
 export default class App extends Component {
   arr = [];
-  pageSize = 40;
+  pageSize = 20;
   country = "in";
   category = {};
   render() {
