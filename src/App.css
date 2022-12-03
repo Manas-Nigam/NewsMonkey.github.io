@@ -44,3 +44,27 @@
   color: white;
   font-weight: bolder;
 }
+
+
+
+#cards{
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px;
+  size: auto;
+}
+
+#news-title{
+  font-size: 50px;
+  margin-top: 5vh;
+  text-align: center;
+  font-family: fantasy;
+}
+
+
+#newsmonkey{
+  color: blueviolet;
+}
+
+#newsmonkey:hover{
+  color: red;
+}
