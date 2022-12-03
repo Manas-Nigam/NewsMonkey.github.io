@@ -6,7 +6,7 @@ const Navbar = ()=>{
 
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-lg bg-danger">
+                <nav className="navbar fixed-top navbar-expand-lg navbar-lg bg-danger">
                     <div className="container-fluid">
                         <img src='https://res.9appsinstall.com/group1/M02/4A/C4/q4YBAFid5Z-AFL2tAAAh4TPusKs930.png?x-oss-process=style/mq200' style={{ width: "30px", height: "30px" }} alt='' />
                         <Link className="navbar-brand" to="/">NewsMonkey</Link>

@@ -12,7 +12,6 @@ const News = (props) => {
     const [loading, setLoading] = useState(false);
     const [page, setPage] = useState(1);
     const [totalResults, settotalResults] = useState(0);
-    // document.title = `NewsMonkey | ${capitalizeFirstLetter(props.category)}`
 
 
 
@@ -42,15 +41,18 @@ setLoading(true);
 
 
     useEffect(() => {
+        document.title = `NewsMonkey | ${capitalizeFirstLetter(props.category)}`
         updateNews();
+
+        // eslint-disable-next-line
     }, [])
 
 
 
    const fetchMoreData = async() => {
         setTimeout(async () => {
+            const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&category=${props.category}&apiKey=1dd6ba6dea624ee08026869c79c64612&page=${page + 1}&pageSize=${props.pageSize}`;
             setPage(page + 1)
-            const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&category=${props.category}&apiKey=1dd6ba6dea624ee08026869c79c64612&page=${page}&pageSize=${props.pageSize}`;
             let data = await fetch(url);
             let parsedData = await data.json();
             setArticles(articles.concat(parsedData.articles));
